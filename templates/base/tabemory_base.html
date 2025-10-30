@@ -1,0 +1,22 @@
+{% load django_bootstrap5 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang = "ja">
+    <head>
+        <meta charset="utf-8" />
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        <title>たべモリー</title>
+    </head>
+    <body>
+        <h1>
+            <img src="{% static 'images/logo.png' %}" alt="たべモリーロゴ" height="160" class="me-2 rounded" />
+            <a href="{% url 'tabemory:index' %}">たべモリー</a>
+        </h1>
+        <div class = "container">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
