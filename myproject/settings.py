@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-(0w4t%dns803$+3-*7lu8299-lpljwy56pxfb_rklb2u*23zyo
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['tabemory.onrender.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
