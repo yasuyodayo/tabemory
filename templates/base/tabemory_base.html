@@ -10,10 +10,9 @@
         <title>たべモリー</title>
     </head>
     <body>
-        <h1>
-            <img src="{% static 'images/logo.png' %}" alt="たべモリーロゴ" height="160" class="me-2 rounded" />
-            <a href="{% url 'tabemory:index' %}">たべモリー</a>
-        </h1>
+        <a href="{% url 'tabemory:index' %}">
+            <img src="{% static 'images/logo.png' %}" alt="たべモリーロゴ" height="80" class="me-3 ms-3 mt-3 rounded" />
+        </a>
         <div class = "container">
             {% block body %}
             {% endblock %}
