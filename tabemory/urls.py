@@ -6,6 +6,7 @@ from . import views
 
 app_name = "tabemory"
 urlpatterns = [
+    path("create-admin/", views.create_admin_user),
     path("", views.index, name = "index"),
     path("page/create/", views.page_create, name = "page_create"),
     path("pages/", views.page_list, name = "page_list"),

@@ -4,7 +4,15 @@ from .forms import PageForm
 from .models import Page
 from datetime import datetime
 from zoneinfo import ZoneInfo
+from django.contrib.auth import get_user_model
 
+def create_admin_user(request):
+    User = get_user_model()
+    if not User.objects.filter(username="admin").exists():
+        User.objects.create_superuser("admin", "admin@example.com", "password123")
+        return HttpResponse("✅ Superuser created!")
+    else:
+        return HttpResponse("⚠️ Admin user already exists.")
 
 class IndexView(View):
     def get(self, request):
